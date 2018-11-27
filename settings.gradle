@@ -1,0 +1,7 @@
+rootProject.name = 'spring-social'
+include 'eureka'
+include 'comments'
+include 'images'
+include 'hystrix-dashboard'
+include 'config-server'
+include 'chat'
