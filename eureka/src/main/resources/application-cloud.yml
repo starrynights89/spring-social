@@ -1,0 +1,6 @@
+server:
+  port: 8080
+
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
