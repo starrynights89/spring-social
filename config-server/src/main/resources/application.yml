@@ -11,3 +11,16 @@ spring:
       server:
         git:
           uri: https://github.com/starrynights89/spring-social-config-server
+
+---
+spring:
+  profiles: cloud
+eureka:
+  instance:
+    hostname: ${vcap.application.uris[0]}
+    secure-port: 433
+    secure-port-enabled: true
+  client:
+    serviceUrl:
+      defaultZone: ${vcap.services.${PREFIX:}eureka.credentials.uri:https://${PREFIX:}eureka.${application.domain:cfapps.io}}/eureka/
+
