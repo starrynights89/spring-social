@@ -4,3 +4,4 @@ server:
 eureka:
   instance:
     hostname: ${vcap.application.uris[0]}
+    non-secure-port: 80
