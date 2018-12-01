@@ -1,6 +1,6 @@
 FROM alpine
 MAINTAINER starrynights89
 EXPOSE 8200
-ADD /build/libs/images-0.0.1-SNAPSHOT.jar images-0.0.1-SNAPSHOT.jar
+ADD images/build/libs/images-0.0.1-SNAPSHOT.jar images-0.0.1-SNAPSHOT.jar
 RUN apk add --no-cache openjdk8
 ENTRYPOINT ["java", "-jar", "images-0.0.1-SNAPSHOT.jar"]
