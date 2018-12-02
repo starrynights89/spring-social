@@ -1,7 +1,6 @@
 buildscript {
     ext {
-        springBootVersion = '2.0.5.RELEASE'
-        springCloudVersion = 'Finchley.SR1'
+        springBootVersion = '2.1.1.RELEASE'
     }
     repositories {
         mavenCentral()
@@ -32,6 +31,8 @@ repositories {
     maven { url "https://repo.spring.io/snapshot" }
     maven { url "https://repo.spring.io/milestone" }
 }
+
+ext['springCloudVersion'] = 'Greenwich.M3'
 
 jar {
     baseName = 'spring-social-eureka-server'

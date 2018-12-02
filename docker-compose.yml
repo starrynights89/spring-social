@@ -1,2 +1,47 @@
 version: '2'
-services: {}
+services:
+  mongodb:
+    image: mongo
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+  rabbitmq:
+    image: rabbitmq
+    container_name: rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  config:
+    image: config-server
+    container_name: config-server
+    ports:
+      - "8888:8888"
+  eureka:
+    image: eureka-server
+    container_name: eureka-server
+    ports:
+      - "8761:8761"
+  chat:
+    image: chat
+    container_name: chat
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+      - rabbitmq
+  images:
+    image: images
+    container_name: images
+    ports:
+      - "8200"
+    depends_on:
+      - mongodb
+      - rabbitmq
+  comments:
+    image: comments
+    container_name: comments
+    ports:
+      - "9000"
+    depends_on:
+      - mongodb
+      - rabbitmq
