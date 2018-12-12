@@ -1,7 +1,0 @@
-server:
-  port: 8080
-
-eureka:
-  instance:
-    hostname: localhost
-    non-secure-port: 80

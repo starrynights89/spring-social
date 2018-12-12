@@ -1,8 +1,8 @@
 # tag::eureka
 #!/usr/bin/env bash
 
-cf set-env spring-social-eureka-server spring.cloud.config.uri https://spring-social-config-server.cfapps.io
-cf set-env spring-social-eureka-server spring.cloud.config.label production
+# cf set-env spring-social-eureka-server spring.cloud.config.uri https://spring-social-config-server.cfapps.io
+# cf set-env spring-social-eureka-server spring.cloud.config.label production
 # end::eureka
 
 # tag::chat
