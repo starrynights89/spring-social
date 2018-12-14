@@ -15,6 +15,7 @@ buildscript {
 plugins {
     // gradle-git
     id "com.gorylenko.gradle-git-properties" version "1.5.2" 
+    id 'war'
 }
 
 apply plugin: 'java'
@@ -34,8 +35,8 @@ repositories {
 
 ext['springCloudVersion'] = 'Greenwich.M3'
 
-jar {
-    baseName = 'spring-social-eureka-server'
+war {
+    baseName = 'config-server'
     version = '0.0.1-SNAPSHOT'
 }
 
